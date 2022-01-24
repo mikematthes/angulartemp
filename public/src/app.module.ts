@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
 import moduleName from './app.module.ajs';
 import { HomeComponent } from './home/home.component';
+import { MikeTestComponent } from './miketest/miketest.component';
 
 @NgModule({
     imports: [
@@ -10,10 +11,12 @@ import { HomeComponent } from './home/home.component';
         UpgradeModule
     ],
     declarations: [
-        HomeComponent
+        HomeComponent,
+        MikeTestComponent
     ],
     entryComponents: [
-        HomeComponent
+        HomeComponent,
+        MikeTestComponent
     ]
 })
 export class AppModule {

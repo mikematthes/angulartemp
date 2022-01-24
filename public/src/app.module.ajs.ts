@@ -1,3 +1,5 @@
+import { downgradeComponent } from '@angular/upgrade/static';
+
 import * as angular from 'angular';
 import 'angular-route';
 
@@ -23,7 +25,8 @@ import productDetailComponent from './productDetail/productDetail';
 import CustomerService from './customers/customerService';
 import AddressService from './shared/addressService';
 import OrderService from './orders/orderService';
-import ProductService from './products/productService'
+import ProductService from './products/productService';
+//import { MikeTestComponent } from './miketest/miketest.component';
 
 const MODULE_NAME = 'app';
 
@@ -40,6 +43,7 @@ angular.module(MODULE_NAME, ['ngRoute'])
   .component('orderDetail', orderDetailComponent)
   .component('products', productsComponent)
   .component('productDetail', productDetailComponent)
+  //.component('miketest', MikeTestComponent)
   .directive('validateDate', validateDateDirective)
   .service('customerService', CustomerService)
   .service('addressService', AddressService)
