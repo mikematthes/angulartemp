@@ -1,3 +1,4 @@
+/*
 import { Component } from '@angular/core';
 import { downgradeComponent } from '@angular/upgrade/static';
 declare var angular: angular.IAngularStatic;
@@ -15,7 +16,13 @@ export class HomeComponent {
     }
 }
 
-/*
+angular.module('app')
+    .directive('home', 
+    downgradeComponent({component: HomeComponent}) as angular.IDirectiveFactory
+);
+*/
+
+
 const template = require('./home.html');
 
 const homeComponent = {
@@ -26,13 +33,9 @@ const homeComponent = {
 
 function homeComponentController(){
     var vm = this;
-    vm.title = 'Awesome, Inc. Internal Ordering System';
+    vm.title = 'Example AngularJS Page';
 }
 
 export default homeComponent;
-*/
 
-angular.module('app')
-    .directive('home', 
-    downgradeComponent({component: HomeComponent}) as angular.IDirectiveFactory
-);
+

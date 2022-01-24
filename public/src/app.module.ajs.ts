@@ -11,7 +11,7 @@ import "./styles/app.scss";
 
 import hashPrefixConfig from './config.hashprefix';
 import routeProviderConfig from './config.routes';
-//import homeComponent from './home/home';
+import homeComponent from './home/home';
 import navigationComponent from './navigation/navigation';
 import customersComponent from './customers/customers';
 import customersTableComponent from './customers/customers-table';
@@ -33,7 +33,7 @@ const MODULE_NAME = 'app';
 angular.module(MODULE_NAME, ['ngRoute'])
   .config(hashPrefixConfig)
   .config(routeProviderConfig)
-//  .component('home', homeComponent)
+  .component('home', homeComponent)
   .component('navigation', navigationComponent)
   .component('customers', customersComponent)
   .component('customersTable', customersTableComponent)
