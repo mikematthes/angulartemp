@@ -26,7 +26,7 @@ import CustomerService from './customers/customerService';
 import AddressService from './shared/addressService';
 import OrderService from './orders/orderService';
 import ProductService from './products/productService';
-//import { MikeTestComponent } from './miketest/miketest.component';
+import { MikeTestComponent } from './miketest/miketest.component';
 
 const MODULE_NAME = 'app';
 
@@ -48,6 +48,7 @@ angular.module(MODULE_NAME, ['ngRoute'])
   .service('customerService', CustomerService)
   .service('addressService', AddressService)
   .service('orderService', OrderService)
-  .service('productService', ProductService);
+  .service('productService', ProductService)
+  .directive('miketest', downgradeComponent({component: MikeTestComponent}) as angular.IDirectiveFactory)
 
 export default MODULE_NAME;

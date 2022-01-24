@@ -3,13 +3,12 @@ import { downgradeComponent } from '@angular/upgrade/static';
 declare var angular: angular.IAngularStatic;
 
 const template = require('./miketest.html');
+
 console.log('miketest 1');
-
-
-
 @Component({
     selector: 'miketest',
-    template: template
+    template: template,
+    //templateUrl: './miketest.html'
 })
 export class MikeTestComponent {
     title: string;
@@ -19,9 +18,3 @@ export class MikeTestComponent {
         this.title = 'This is the miketest component';
     }
 }
-
-angular.module('app')
-    .directive('miketest', 
-    downgradeComponent({component: MikeTestComponent}) as angular.IDirectiveFactory
-);
-console.log('miketest 3');
