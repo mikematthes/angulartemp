@@ -34,6 +34,8 @@ const homeComponent = {
 function homeComponentController(){
     var vm = this;
     vm.title = 'Example AngularJS Page';
+    vm.currenttime = new  Date().toString();
+    vm.currenttime2 = new  Date().toString();
 }
 
 export default homeComponent;

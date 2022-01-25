@@ -2,21 +2,18 @@ import { Component, Input } from '@angular/core';
 import { downgradeComponent } from '@angular/upgrade/static';
 declare var angular: angular.IAngularStatic;
 
-const template = require('./miketest.html');
+const template = require('./miketest2.html');
 
-console.log('miketest 1');
+console.log('miketest2 #1');
 @Component({
-    selector: 'miketest',
+    selector: 'miketest2',
     template: template,
     //templateUrl: './miketest.html'
 })
-export class MikeTestComponent {
+export class MikeTest2Component {
     @Input() theval;
-    @Input() currenttime;
-    currenttime2: string;
-
+    @Input() currenttime = "unset22";
     constructor(){
-        console.log('miketest component');
-        this.currenttime2 = new Date().toString();
+        console.log('miketest2 #2');
     }
 }
