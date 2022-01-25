@@ -57,6 +57,14 @@ module.exports = {
                 var context = module.context;
                 return context && context.indexOf('node_modules') >= 0;
             }
-        })
+        }),
+
+        //remove error: 18359:15-36 Critical dependency: the request of a dependency is an expression
+        //and remove error: 18371:15-102 Critical dependency: the request of a dependency is an expression
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core/,
+            path.resolve(__dirname, 'src'), // path to your src
+            {}
+        )        
     ]
 };
